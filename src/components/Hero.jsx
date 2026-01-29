@@ -5,11 +5,16 @@ import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll();
+  
+  // Move useScroll to target the container instead of window
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end start"]
+  });
 
-  // Scroll-based parallax
-  const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  // Use scrollYProgress (0-1) instead of scrollY for more stability
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 200]);
+  const opacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
 
   // Animation variants
   const containerVariants = {
@@ -27,14 +32,30 @@ const Hero = () => {
     visible: { scale: 1, opacity: 1, rotate: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  // Preload images to avoid jerks
+  // Fix image preloading
   useEffect(() => {
     const preloadImages = [
       'https://res.cloudinary.com/dw9dtsgdm/image/upload/v1769720242/background_otqv3z.jpg',
       'https://res.cloudinary.com/dw9dtsgdm/image/upload/v1769720239/profile_govxcr.jpg',
     ];
+    
+    let loadedCount = 0;
+    const totalImages = preloadImages.length;
+    
     preloadImages.forEach((src) => {
       const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setIsLoaded(true);
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setIsLoaded(true); // Still set loaded even if images fail
+        }
+      };
       img.src = src;
     });
   }, []);
@@ -75,7 +96,7 @@ const Hero = () => {
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        animate={isLoaded ? 'visible' : 'hidden'}
+        animate="visible"
         className="relative z-10 text-center max-w-5xl mx-auto"
       >
         {/* Profile */}
@@ -85,7 +106,6 @@ const Hero = () => {
             <img
               src="https://res.cloudinary.com/dw9dtsgdm/image/upload/v1769720239/profile_govxcr.jpg"
               alt="Nouman Mujahid"
-              onLoad={() => setIsLoaded(true)}
               className={`relative z-10 w-full h-full object-cover rounded-full filter grayscale group-hover:grayscale-0 transition-opacity duration-500 group-hover:scale-110 will-change-transform ${
                 isLoaded ? 'opacity-100' : 'opacity-0'
               }`}
@@ -119,9 +139,10 @@ const Hero = () => {
 
         {/* Actions */}
         <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-6 items-center">
-          <a
+          
             href="/assets/resume/NoumanShakeel_resume.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             className="group relative px-10 py-4 bg-white text-pitch font-bold rounded-full overflow-hidden transition-all hover:pr-14 active:scale-95 shadow-lg"
           >
             <span className="relative z-10">Hire Nouman</span>
@@ -130,21 +151,23 @@ const Hero = () => {
           </a>
 
           <div className="flex gap-2 items-center glass-dark p-2 rounded-full border border-white/5 hover:border-neon-purple/30 transition-colors">
-            <a
+            
               href="https://github.com/Cs-NoumanShakeel"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-3 text-gray-400 hover:text-neon-blue hover:bg-neon-blue/5 rounded-full transition-all"
             >
               <Github size={22} className="group-hover:drop-shadow-[0_0_8px_#00f3ff]" />
             </a>
-            <a
+            
               href="http://www.linkedin.com/in/nouman-shakeel-214ab9361"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-3 text-gray-400 hover:text-neon-purple hover:bg-neon-purple/5 rounded-full transition-all"
             >
               <Linkedin size={22} className="group-hover:drop-shadow-[0_0_8px_#bc13fe]" />
             </a>
-            <a
+            
               href="mailto:noumannorm648@gmail.com"
               className="p-3 text-gray-400 hover:text-neon-pink hover:bg-neon-pink/5 rounded-full transition-all"
             >
