@@ -61,7 +61,7 @@ const Hero = () => {
                 <div className="scan-line opacity-10"></div>
 
                 <img
-                    src="/assets/profile_images/background.jpg"
+                    src="https://res.cloudinary.com/dw9dtsgdm/image/upload/v1769720242/background_otqv3z.jpg"
                     alt="Overlay"
                     loading="eager"
                     className="w-full h-full object-cover opacity-10 mix-blend-overlay"
@@ -78,7 +78,7 @@ const Hero = () => {
                     <div className="relative z-10 w-44 h-44 mx-auto rounded-full p-[2px] bg-gradient-to-tr from-neon-blue/40 via-neon-purple/40 to-neon-pink/40 border border-white/5 overflow-hidden group">
                         <div className="absolute inset-0 bg-pitch rounded-full group-hover:scale-95 transition-transform duration-700 ease-out"></div>
                         <img
-                            src="/assets/profile_images/profile.jpeg"
+                            src="https://res.cloudinary.com/dw9dtsgdm/image/upload/v1769720239/profile_govxcr.jpg"
                             alt="Nouman Mujahid"
                             fetchPriority="high"
                             onLoad={() => setIsLoaded(true)}
