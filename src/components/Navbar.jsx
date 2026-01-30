@@ -49,10 +49,10 @@ const Navbar = () => {
                     <div className="h-4 w-[1px] bg-white/10"></div>
 
                     <div className="flex items-center gap-4">
-                        <a href="https://github.com/Cs-NoumanShakeel" target="_blank" className="text-gray-400 hover:text-white transition-all">
+                        <a href="https://github.com/Cs-NoumanMujahid" target="_blank" className="text-gray-400 hover:text-white transition-all">
                             <Github size={18} />
                         </a>
-                        <a href="http://www.linkedin.com/in/nouman-shakeel-214ab9361" target="_blank" className="text-gray-400 hover:text-white transition-all">
+                        <a href="https://www.linkedin.com/in/nouman-mujahid-214ab9361" target="_blank" className="text-gray-400 hover:text-white transition-all">
                             <Linkedin size={18} />
                         </a>
                     </div>
@@ -85,10 +85,10 @@ const Navbar = () => {
                                 </a>
                             ))}
                             <div className="flex gap-4 pt-4">
-                                <a href="https://github.com/Cs-NoumanShakeel" className="p-4 glass rounded-2xl text-white">
+                                <a href="https://github.com/Cs-NoumanMujahid" className="p-4 glass rounded-2xl text-white">
                                     <Github size={24} />
                                 </a>
-                                <a href="http://www.linkedin.com/in/nouman-shakeel-214ab9361" className="p-4 glass rounded-2xl text-white">
+                                <a href="https://www.linkedin.com/in/nouman-mujahid-214ab9361" className="p-4 glass rounded-2xl text-white">
                                     <Linkedin size={24} />
                                 </a>
                             </div>

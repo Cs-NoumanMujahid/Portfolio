@@ -21,7 +21,7 @@ export const projects = [
         purpose: "To provide users with real-time feedback on their exercise form to prevent injury and improve performance.",
         problems: "Capturing and analyzing pose data in real-time with low latency was a major challenge.",
         solutions: "Optimized the processing pipeline using threading and reduced input resolution for faster MediaPipe inference.",
-        github: "https://github.com/Cs-NoumanShakeel/GYMFREAK"
+        github: "https://github.com/Cs-NoumanMujahid/GYMFREAK"
     },
     {
         id: "ant-colony",
@@ -35,7 +35,7 @@ export const projects = [
         purpose: "To explore the combination of agent-based simulation and bio-inspired AI algorithms.",
         problems: "Balancing the exploration vs. exploitation trade-off in the evolution process.",
         solutions: "Fine-tuned the genetic algorithm parameters and introduced elitism to preserve high-performing agents.",
-        github: "https://github.com/Cs-NoumanShakeel/ANTS_COLONY_SIMULATION_NEURAL_NETWORK"
+        github: "https://github.com/Cs-NoumanMujahid/ANTS_COLONY_SIMULATION_NEURAL_NETWORK"
     },
     {
         id: "pyshooter",
@@ -49,7 +49,7 @@ export const projects = [
         purpose: "To show how AI can be integrated into games for real-time assistance and enhanced gameplay.",
         problems: "YOLO inference can be heavy for a real-time game environment.",
         solutions: "Implemented multi-threading to run YOLO detection in the background, ensuring smooth gameplay without blocking the main loop.",
-        github: "https://github.com/Cs-NoumanShakeel/PyShooter_ObjectDetection"
+        github: "https://github.com/Cs-NoumanMujahid/PyShooter_ObjectDetection"
     },
     {
         id: "discoverspace",
@@ -63,7 +63,7 @@ export const projects = [
         purpose: "To provide an educational platform for exploring space data provided by NASA.",
         problems: "Handling large amounts of image data from NASA APIs efficiently.",
         solutions: "Implemented lazy loading and image caching to improve page load times.",
-        github: "https://github.com/Cs-NoumanShakeel/DiscoverSpace"
+        github: "https://github.com/Cs-NoumanMujahid/DiscoverSpace"
     },
     {
         id: "parallel-rag",
@@ -77,7 +77,7 @@ export const projects = [
         purpose: "To handle large-scale document embedding and retrieval for intelligent Q&A tasks.",
         problems: "Bottlenecks in document ingestion during high load.",
         solutions: "Developed a parallelized producer-worker architecture to distribute the embedding workload.",
-        github: "https://github.com/Cs-NoumanShakeel/ParallelEmbeddingSystem"
+        github: "https://github.com/Cs-NoumanMujahid/ParallelEmbeddingSystem"
     },
     {
         id: "becafe",
@@ -91,6 +91,6 @@ export const projects = [
         purpose: "To build a robust and scalable end-to-end ecommerce solution.",
         problems: "Managing session state and authentication securely.",
         solutions: "Used JWT for stateless authentication and implemented middleware for role-based access control.",
-        github: "https://github.com/Cs-NoumanShakeel/BECAFE-Ecommerce"
+        github: "https://github.com/Cs-NoumanMujahid/BECAFE-Ecommerce"
     }
 ];

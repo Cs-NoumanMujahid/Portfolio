@@ -120,10 +120,10 @@ const Hero = () => {
                     </a>
 
                     <div className="flex gap-2 items-center glass-dark p-2 rounded-full border border-white/5 hover:border-neon-purple/30 transition-colors">
-                        <a href="https://github.com/Cs-NoumanShakeel" target="_blank" className="p-3 text-gray-400 hover:text-neon-blue hover:bg-neon-blue/5 rounded-full transition-all">
+                        <a href="https://github.com/Cs-NoumanMujahid" target="_blank" className="p-3 text-gray-400 hover:text-neon-blue hover:bg-neon-blue/5 rounded-full transition-all">
                             <Github size={22} className="group-hover:drop-shadow-[0_0_8px_#00f3ff]" />
                         </a>
-                        <a href="http://www.linkedin.com/in/nouman-shakeel-214ab9361" target="_blank" className="p-3 text-gray-400 hover:text-neon-purple hover:bg-neon-purple/5 rounded-full transition-all">
+                        <a href="https://www.linkedin.com/in/nouman-mujahid-214ab9361" target="_blank" className="p-3 text-gray-400 hover:text-neon-purple hover:bg-neon-purple/5 rounded-full transition-all">
                             <Linkedin size={22} className="group-hover:drop-shadow-[0_0_8px_#bc13fe]" />
                         </a>
                         <a href="mailto:noumannorm648@gmail.com" className="p-3 text-gray-400 hover:text-neon-pink hover:bg-neon-pink/5 rounded-full transition-all">

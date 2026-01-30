@@ -15,10 +15,10 @@ const Footer = () => {
                         Full Stack Python Developer specializing in high-performance AI integration and cinematic web experiences. Currently exploring the frontiers of Machine Learning at Comsats.
                     </p>
                     <div className="flex gap-4">
-                        <a href="https://github.com/Cs-NoumanShakeel" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all hover:bg-white/5">
+                        <a href="https://github.com/Cs-NoumanMujahid" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all hover:bg-white/5">
                             <Github size={18} />
                         </a>
-                        <a href="http://www.linkedin.com/in/nouman-shakeel-214ab9361" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all hover:bg-white/5">
+                        <a href="https://www.linkedin.com/in/nouman-mujahid-214ab9361" target="_blank" className="w-10 h-10 glass rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-all hover:bg-white/5">
                             <Linkedin size={18} />
                         </a>
                     </div>
